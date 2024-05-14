@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BeneficiaryController">
+   <children>
+      <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0" styleClass="semi-top-form" stylesheets="@BeneficiaryDesign.css">
+         <children>
+            <BorderPane layoutX="163.0" layoutY="100.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutY="-69.0" prefHeight="131.0" prefWidth="1100.0" styleClass="top-form" stylesheets="@BeneficiaryDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="22.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fitHeight="31.0" fitWidth="30.0" layoutX="19.0" layoutY="12.0">
+                                 <image>
+                                    <Image url="@../../../../../../../Pictures/Screenshots/Screenshot%20(152).png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="62.0" layoutY="19.0" text="EduShare Platform">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="close" layoutX="1039.0" layoutY="11.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="62.0" styleClass="close" stylesheets="@BeneficiaryDesign.css" text="❌" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                              <Button fx:id="minimize" layoutX="996.0" layoutY="2.0" mnemonicParsing="false" onAction="#minimize" prefHeight="25.0" prefWidth="40.0" styleClass="minimize" stylesheets="@BeneficiaryDesign.css" text="➖" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="21.0" layoutY="136.0" prefHeight="555.0" prefWidth="221.0" styleClass="nav-form" stylesheets="@BeneficiaryDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="109.0" fitWidth="120.0" layoutX="47.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../../Pictures/Screenshots/Screenshot%20(158).png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="64.0" layoutY="155.0" text="Welcome," textFill="#faf6f6">
+                                 <font>
+                                    <Font name="Tahoma" size="17.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="username" alignment="CENTER" contentDisplay="CENTER" layoutY="176.0" prefHeight="25.0" prefWidth="201.0" text="Student" textFill="#f8f8f8">
+                                 <font>
+                                    <Font name="Tahoma Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="88.0" layoutX="101.0" layoutY="209.0" startX="-87.0" />
+                              <Button fx:id="homeButton" layoutX="11.0" layoutY="222.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@BeneficiaryDesign.css" text="🏠 Home" />
+                              <Button layoutX="11.0" layoutY="257.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@BeneficiaryDesign.css" text="👤 Add User" />
+                              <Button layoutX="11.0" layoutY="292.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@BeneficiaryDesign.css" text="🗂📑 School Project" />
+                              <Button layoutX="11.0" layoutY="327.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="180.0" styleClass="nav-btn" stylesheets="@BeneficiaryDesign.css" text="💸 Scholarship" />
+                              <Button fx:id="logout" layoutX="14.0" layoutY="516.0" mnemonicParsing="false" onAction="#logout" text="↪️" />
+                              <Label layoutX="50.0" layoutY="520.0" text="Logout" textFill="#fdfcfc">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="beneficiaryform" prefHeight="208.0" prefWidth="899.0" styleClass="semi-top-form" stylesheets="@BeneficiaryDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="327.0" prefWidth="900.0">
+                                 <children>
+                                    <TableView fx:id="tableView" layoutX="10.0" layoutY="48.0" prefHeight="271.0" prefWidth="880.0">
+                                      <columns>
+                                        <TableColumn fx:id="colm_UserID" prefWidth="69.0" text="User ID" />
+                                        <TableColumn fx:id="colm_FirstName" prefWidth="90.0" text="First Name" />
+                                          <TableColumn fx:id="colm_LastName" prefWidth="102.5" text="Last Name" />
+                                          <TableColumn fx:id="colm_Email" prefWidth="173.5" text="E-mail" />
+                                          <TableColumn fx:id="colm_GPA" prefWidth="64.5" text="GPA" />
+                                          <TableColumn fx:id="colm_ScholarshipApplied" prefWidth="172.5" text="Scholarship Applied" />
+                                          <TableColumn fx:id="colm_SchoolProjectApplied" prefWidth="207.0" text="School Project Applied" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="search" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="319.0" promptText="Search" stylesheets="@BeneficiaryDesign.css" />
+                                 </children>
+                              </AnchorPane>
+                              <Label layoutX="36.0" layoutY="340.0" text="User ID:" AnchorPane.leftAnchor="30.0">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="User_ID" layoutX="93.0" layoutY="336.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <Label layoutX="40.0" layoutY="452.0" text="E-mail:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="50.0" layoutY="486.0" text="GPA:" AnchorPane.leftAnchor="51.0">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="378.0" text="First Name:" AnchorPane.leftAnchor="12.0">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="414.0" text="Last Name:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="First_Name" layoutX="93.0" layoutY="375.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <TextField fx:id="Last_Name" layoutX="93.0" layoutY="411.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <TextField fx:id="E_mail" layoutX="93.0" layoutY="448.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <TextField fx:id="GPA" layoutX="93.0" layoutY="482.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <Label layoutX="362.0" layoutY="340.0" text="Scholarship Applied:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="344.0" layoutY="379.0" text="School Project Applied:">
+                                 <font>
+                                    <Font name="Tahoma" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="Scholarship_Applied" layoutX="500.0" layoutY="337.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <TextField fx:id="School_Project_Applied" layoutX="500.0" layoutY="376.0" styleClass="textfield" stylesheets="@BeneficiaryDesign.css" />
+                              <AnchorPane layoutX="726.0" layoutY="338.0" prefHeight="127.0" prefWidth="150.0">
+                                 <children>
+                                    <ImageView fitHeight="127.0" fitWidth="161.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="addUserBtn" layoutX="28.0" layoutY="92.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="101.0" styleClass="import-btn" stylesheets="@BeneficiaryDesign.css" text="Import" />
+                                 </children>
+                              </AnchorPane>
+                              <Button fx:id="Add" layoutX="705.0" layoutY="495.0" mnemonicParsing="false" onAction="#addUserAdd" prefHeight="44.0" prefWidth="88.0" styleClass="add-btn" stylesheets="@BeneficiaryDesign.css" text="Add" />
+                              <Button fx:id="Clear" layoutX="355.0" layoutY="495.0" mnemonicParsing="false" onAction="#addUserReset" prefHeight="44.0" prefWidth="88.0" styleClass="clear-btn" stylesheets="@BeneficiaryDesign.css" text="Clear" />
+                              <Button fx:id="Delete" layoutX="456.0" layoutY="495.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="88.0" styleClass="delete-btn" stylesheets="@BeneficiaryDesign.css" text="Delete" />
+                              <Button fx:id="Update" layoutX="605.0" layoutY="495.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="88.0" styleClass="update-btn" stylesheets="@BeneficiaryDesign.css" text="Update" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

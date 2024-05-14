@@ -1,0 +1,64 @@
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+public class EmployeeRegistrationApp extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        // Initialize UI components
+        Label titleLabel = new Label("Employee Registration Application");
+        Label idLabel = new Label("Employee ID:");
+        TextField idTextField = new TextField();
+        Label nameLabel = new Label("Name:");
+        TextField nameTextField = new TextField();
+        Label ageLabel = new Label("Age:");
+        TextField ageTextField = new TextField();
+        Label emailLabel = new Label("Email:");
+        TextField emailTextField = new TextField();
+        Label departmentLabel = new Label("Department:");
+        TextField departmentTextField = new TextField();
+        Button registerButton = new Button("Register");
+        Button viewButton = new Button("View Employees");
+        Button updateButton = new Button("Update Employee");
+
+        // Create layout
+        GridPane gridPane = new GridPane();
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+        gridPane.addRow(0, titleLabel);
+        gridPane.addRow(1, idLabel, idTextField);
+        gridPane.addRow(2, nameLabel, nameTextField);
+        gridPane.addRow(3, ageLabel, ageTextField);
+        gridPane.addRow(4, emailLabel, emailTextField);
+        gridPane.addRow(5, departmentLabel, departmentTextField);
+        gridPane.addRow(6, registerButton, viewButton, updateButton);
+
+        // Register button action
+        registerButton.setOnAction(e -> {
+            // Add code to register employee to the database
+        });
+
+        // View button action
+        viewButton.setOnAction(e -> {
+            // Add code to view registered employees
+        });
+
+        // Update button action
+        updateButton.setOnAction(e -> {
+            // Add code to update employee details
+        });
+
+        // Set up scene
+        Scene scene = new Scene(gridPane, 400, 300);
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Employee Registration App");
+        primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
